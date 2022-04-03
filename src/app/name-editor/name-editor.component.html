@@ -1,0 +1,30 @@
+<label for="name">Name: </label>
+<input type="text" name="" id="name" [formControl]="name">
+<p>Value: {{name.value}}</p>
+<button (click)="updateName()">Update Name</button>
+
+<form [formGroup]="basvuruForm" (ngSubmit)="onSubmit()">
+    <label for="first-name">First Name</label>
+    <input type="text" name="" id="first-name" formControlName="firstname">
+
+    <label for="last-name">Last Name</label>
+    <input type="text" name="" id="last-name" formControlName="lastname">
+
+    <div formGroupName="address">
+        <h2>Address</h2>
+        
+        <label for="street">Street: </label>
+        <input type="text" id="street" fromControlName="street">
+
+        <label for="city">City: </label>
+        <input type="text" id="city" fromControlName="city">
+
+        <label for="state">State: </label>
+        <input type="text" id="state" fromControlName="state">
+
+        <label for="zip">Zip Code: </label>
+        <input type="text" id="zip" fromControlName="zip">
+    </div>
+    
+    <button type="submit" [disabled]="!basvuruForm.valid">Gönder</button>
+</form>
