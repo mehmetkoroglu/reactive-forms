@@ -5,25 +5,25 @@
 
 <form [formGroup]="basvuruForm" (ngSubmit)="onSubmit()">
     <label for="first-name">First Name</label>
-    <input type="text" name="" id="first-name" formControlName="firstname">
+    <input type="text" id="first-name" formControlName="firstname">
 
     <label for="last-name">Last Name</label>
-    <input type="text" name="" id="last-name" formControlName="lastname">
+    <input type="text" id="last-name" formControlName="lastname">
 
     <div formGroupName="address">
         <h2>Address</h2>
         
         <label for="street">Street: </label>
-        <input type="text" id="street" fromControlName="street">
+        <input type="text" id="street" formControlName="street">
 
         <label for="city">City: </label>
-        <input type="text" id="city" fromControlName="city">
+        <input type="text" id="city" formControlName="city">
 
         <label for="state">State: </label>
-        <input type="text" id="state" fromControlName="state">
+        <input type="text" id="state" formControlName="state">
 
         <label for="zip">Zip Code: </label>
-        <input type="text" id="zip" fromControlName="zip">
+        <input type="text" id="zip" formControlName="zip">
     </div>
     
     <button type="submit" [disabled]="!basvuruForm.valid">Gönder</button>
